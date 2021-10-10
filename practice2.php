@@ -62,3 +62,78 @@ AAAはHelloではない    ※AAAに、その文字列を当てはめる
     }
 ?>
 
+標準入力から受け取った整数を、if で判定。
+各条件(100 より小さい場合、200 より小さい場合、それ以外)に合わせて、メッセージを表示する
+<?php
+    # 特定の条件で数値を表示
+    $number = trim(fgets(STDIN));
+    if ($number < 100) {
+        echo $number . "は100より小さい\n";
+    } elseif ($number < 200) {
+        echo $number . "は100以上200より小さい\n";
+    } else {
+        echo $number . "は200以上\n";
+    }
+?>
+
+/「ゼロ・プラス・マイナス」
+<?php
+    # ゼロ・プラス・マイナス
+    $number = trim(fgets(STDIN));
+    if ($number == 0){
+        echo $number . "は0\n";
+    } elseif ($number > 0){
+        echo $number . "はプラス\n";
+    } else {
+        echo $number . "はマイナス\n";
+    }    
+?>
+
+//同じ処理を何度も繰り返す
+<?php
+    $greeting = "Hello world";
+    for ($i = 0; $i <5; $i++){
+        echo $greeting . ":" . $i . "\n";
+    }
+?>
+
+//for で、echo を 1000 回繰り返す
+<?php
+    # 1000 回繰り返す
+    $greeting = "Hello paiza\n";
+    echo  $greeting;
+    
+    for ($i = 0; $i < 1000; $i++){
+        echo $greeting;
+    }
+?>
+
+//受け取った整数回、for で echo を繰り返す
+<?php
+    # 標準入力で指定した回数繰り返す
+    $greeting = "Hello paiza\n";
+    $count = trim(fgets(STDIN));
+
+    for ($i = 0; $i < $count; $i++) {
+        echo $greeting;
+    }
+?>
+
+//複数のデータを分類する
+<?php
+    $count = trim(fgets(STDIN));
+
+    for ($i = 0; $i < $count; $i++) {
+        $number = trim(fgets(STDIN));
+        echo $number . "\n"
+        
+        if ($number == 10) {
+            echo $number . "は10に等しい\n";
+        } elseif ($number > 10){
+            echo $number . "は10より大きい\n";
+        } else {
+            echo $number . "は10未満\n";
+        }
+    }
+?>
+
