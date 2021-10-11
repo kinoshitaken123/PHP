@@ -137,3 +137,36 @@ AAAはHelloではない    ※AAAに、その文字列を当てはめる
     }
 ?>
 
+//受け取った整数回、for で 条件判定を繰り返す
+<?php
+    # ゼロ・プラス・マイナスを繰り返し判定する
+    $count = trim(fgets(STDIN));
+    echo $count . "\n";
+    
+    for ($i = 0; $i < $count; $i++) {
+        $number =trim(fgets(STDIN));
+        if ($number == 0){
+            echo $number . "は0\n";
+        } elseif ($number > 0) {
+            echo $number . "はプラス\n";
+        } else {
+            echo $number . "はマイナス\n";
+        }
+    }
+?>
+
+<?php
+// 値段計算をしてみよう
+// 代数演算子 + - * / %
+// $apple　リンゴの値段
+// $apple_num　リンゴを買う数
+
+$apple = 350;
+$apple_num =rand(1,10);
+echo "りんごの値段:".$apple."円\n";
+echo "りんごの買う数:".$apple_num."個\n";
+$total = $apple * $apple_num;
+echo "合計" .$total."円です。";
+?>
+
+
