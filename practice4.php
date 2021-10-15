@@ -21,3 +21,13 @@ for($i=0; $i < $input1; $i++){
 }
 
 ?>
+
+//西暦年と平成年の対応表を作る 
+<?php
+// Here your code !
+for($year =1989; $year <= 2015; $year++){
+    $heisei = $year - 1988;
+    echo "西暦". $year ."年は平成".$heisei ."年です。\n";
+}
+
+?>
