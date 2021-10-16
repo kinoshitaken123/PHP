@@ -30,3 +30,15 @@ print_r($team);
 
 ?>
 
+//配列の基本操作
+<?php
+$a = trim(fgets(STDIN));
+$b = trim(fgets(STDIN)); 
+$c = trim(fgets(STDIN));
+
+// $a,$b,$cを指定の順番で配列$teamに代入してください
+$team = array($b, $c, $a);
+print_r($team);
+
+?>
+
