@@ -42,3 +42,14 @@ print_r($team);
 
 ?>
 
+<?php 
+
+$team = array("勇者","魔法使い","オオカミ");
+$team[] "ドラゴン";
+$team[] "ドラゴン";
+$team[] "遊び人";
+
+unset($team[2]);
+
+print_r($team);
+?>
