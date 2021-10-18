@@ -53,3 +53,12 @@ unset($team[2]);
 
 print_r($team);
 ?>
+
+//explodeで文字列を分割
+<?php
+$input = trim(fgets(STDIN));
+$array = explode(",", $input);
+print_r($array);
+
+echo count($array);
+?>
