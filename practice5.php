@@ -46,7 +46,6 @@ print_r($team);
 
 $team = array("勇者","魔法使い","オオカミ");
 $team[] "ドラゴン";
-$team[] "ドラゴン";
 $team[] "遊び人";
 
 unset($team[2]);
